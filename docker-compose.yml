@@ -1,0 +1,13 @@
+mysql:
+    image: mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=dev
+        - MYSQL_DATABASE=android_api
+    ports:
+      - 3306:3306
+adminer:
+    image: clue/adminer
+    links:
+        - mysql:mysql
+    ports:
+      - 80:80
