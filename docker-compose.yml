@@ -1,13 +1,23 @@
 mysql:
     image: mysql
+    restart: always
     environment:
         - MYSQL_ROOT_PASSWORD=dev
         - MYSQL_DATABASE=android_api
-    ports:
-      - 3306:3306
 adminer:
     image: clue/adminer
+    restart: always
+    environment:
+        - VIRTUAL_HOST=android.adminer.misterbanal.net
     links:
         - mysql:mysql
+nodeapp:
+    build: .
+    restart: always
     ports:
-      - 80:80
+        - 1337:1337
+    environment:
+        - VIRTUAL_HOST=android.misterbanal.net
+    links:
+        - mysql:mysql
+
