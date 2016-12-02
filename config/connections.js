@@ -42,7 +42,8 @@ module.exports.connections = {
   ***************************************************************************/
   someMysqlServer: {
     adapter: 'sails-mysql',
-    host: 'localhost',
+    host: 'mysql',
+    port: 3306,
     user: 'root', //optional
     password: 'dev', //optional
     database: 'android_api' //optional
