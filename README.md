@@ -8,5 +8,6 @@ Cette application web RestFull repose sur le framework SailsJs qui est un framew
 Toute la documentation relative à l'API se trouve sur le site officiel de sailjs :
 [Documentation de l'API](http://sailsjs.com/documentation/reference/blueprint-api)
 
-L'adresse de l'API est "android.adminer.misterbanal.net".
+L'adresse de l'API est "android.misterbanal.net".
 
+Par exemple pour lister les villes : [List Cities](http://android.misterbanal.net/city)
